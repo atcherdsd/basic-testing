@@ -80,7 +80,7 @@ describe('BankAccount', () => {
 
   test('should transfer money', () => {
     const anotherBankAccount = getBankAccount(300);
-    const transferSpy = jest.spyOn(anotherBankAccount, 'withdraw');
+    const transferSpy = jest.spyOn(anotherBankAccount, 'transfer');
     const receivingAccount = getBankAccount(150);
     anotherBankAccount.transfer(100, receivingAccount);
 
